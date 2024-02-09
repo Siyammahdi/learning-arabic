@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import ReactPlayer from 'react-player/youtube'
+import { useNavigate } from 'react-router-dom';
 
 const Banner = () => {
 
@@ -10,6 +11,11 @@ const Banner = () => {
         }
     };
 
+    const navigate = useNavigate();
+    const handleLink = () => {
+        navigate("/playlist")
+    }
+
     return (
         <div>
             <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/c3nd9gZ/istockphoto-1469852365-170667a.webp)' }}>
@@ -18,7 +24,7 @@ const Banner = () => {
                         <div className="w-1/2 text-start">
                             <h1 className="mb-5 text-5xl font-bold text-basic">Learning Arabic</h1>
                             <p className="mb-5 text-basic">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                            <button className="btn text-white bg-basic">Explore More</button>
+                            <button onClick={handleLink} className="btn text-white bg-basic hover:bg-amber-950">View full playlist</button>
                         </div>
                         <div>
                             <div className="card card-compact w-[650px] bg-basic bg-opacity-50 backdrop-blur-md shadow-xl">
@@ -37,7 +43,7 @@ const Banner = () => {
                                 <div className="card-body">
                                     <div className='flex justify-between'>
                                         <h2 className="card-title text-2xl text-white">Lesson 1</h2>
-                                        <button onClick={handleFullScreen} className="btn btn-sm bg-basic text-white">View Fullscreen</button>
+                                        <button onClick={handleFullScreen} className="btn btn-sm bg-basic text-white hover:bg-amber-950">View Fullscreen</button>
                                     </div>
                                 </div>
                             </div>

@@ -7,15 +7,22 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import ErrorPage from './ErrorPage/ErrorPage.jsx';
+import Playlist from './Pages/Playlist/Playlist.jsx';
+import Layout from './Layout/Layout.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
       {
-        
+        path: "/",
+        element: <App />
+      },
+      {
+        path: "/playlist",
+        element: <Playlist />,
       },
     ],
   },

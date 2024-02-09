@@ -1,4 +1,5 @@
-import Banner from "./Components/Banner/Banner"
+import Banner from "./Pages/Banner/Banner"
+
 
 function App() {
 
