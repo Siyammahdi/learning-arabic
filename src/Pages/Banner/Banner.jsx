@@ -20,14 +20,14 @@ const Banner = () => {
         <div>
             <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/c3nd9gZ/istockphoto-1469852365-170667a.webp)' }}>
                 <div className="hero-content text-center text-neutral-content">
-                    <div className="flex items-center">
-                        <div className="w-1/2 text-start">
-                            <h1 className="mb-5 text-5xl font-bold text-basic">Learning Arabic</h1>
-                            <p className="mb-5 text-basic">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                            <button onClick={handleLink} className="btn text-white bg-basic hover:bg-amber-950">View full playlist</button>
+                    <div className="flex flex-col lg:flex-row items-center">
+                        <div className="lg:w-1/2 my-10 lg:my-0 text-start">
+                            <h1 className="mb-5 text-3xl lg:text-5xl font-bold text-basic">Learning Arabic</h1>
+                            <p className="mb-5 text-sm lg:text-base text-basic">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <button onClick={handleLink} className="btn btn-sm lg:btn-md text-white bg-basic hover:bg-amber-950">View full playlist</button>
                         </div>
                         <div>
-                            <div className="card card-compact w-[650px] bg-basic bg-opacity-50 backdrop-blur-md shadow-xl">
+                            <div className="card card-compact lg:w-[650px] bg-basic bg-opacity-50 backdrop-blur-md shadow-xl">
                                 <figure>
                                     <ReactPlayer 
                                     url='https://www.youtube.com/watch?v=bpU2Esv8xRo&          list=PLDJj4dgyFfNRCm96fB5YaXKxqixsQ7Uj-&index=1' 

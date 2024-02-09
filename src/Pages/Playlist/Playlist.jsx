@@ -23,14 +23,14 @@ const Playlist = () => {
     };
 
     return (
-        <div className="mx-28 ">
+        <div className="mx-5 lg:mx-28 ">
             <div className="flex items-center gap-16">
-                <h2 className="text-4xl py-10">Playlist</h2>
-                <Link to="/"><button className="btn bg-basic"><IoArrowBack /> Go back</button></Link>
+                <h2 className="lg:text-4xl text-3xl py-10">Playlist</h2>
+                <Link to="/"><button className="btn btn-sm lg:btn-md bg-basic"><IoArrowBack /> Go back</button></Link>
             </div>
             <hr />
             <br />
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
                 {videos.map((video) => (
                     <div key={video.id}>
                         <div className="card card-compact border-b-2 border-gray-400 shadow-xl">
