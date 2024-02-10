@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { BsFullscreen } from 'react-icons/bs';
 import ReactPlayer from 'react-player/youtube'
 import { useNavigate } from 'react-router-dom';
 
@@ -23,7 +24,10 @@ const Banner = () => {
                     <div className="flex flex-col lg:flex-row items-center">
                         <div className="lg:w-1/2 my-10 lg:my-0 text-start">
                             <h1 className="mb-5 text-3xl lg:text-5xl font-bold text-basic">Learning Arabic</h1>
-                            <p className="mb-5 text-sm lg:text-base text-basic">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <p className="mb-5 font-medium mr-20 text-sm lg:text-base text-basic">And We have certainly made the Quran easy to remember. So is there anyone who will be mindful? <br />
+                            <span className='flex justify-end -mt-1 mr-5'>Al-Qamar : 17</span>
+                            </p>
+                             
                             <button onClick={handleLink} className="btn btn-sm lg:btn-md text-white bg-basic hover:bg-amber-950">View full playlist</button>
                         </div>
                         <div>
@@ -43,7 +47,7 @@ const Banner = () => {
                                 <div className="card-body">
                                     <div className='flex justify-between'>
                                         <h2 className="card-title text-2xl text-white">Lesson 1</h2>
-                                        <button onClick={handleFullScreen} className="btn btn-sm bg-basic text-white hover:bg-amber-950">View Fullscreen</button>
+                                        <button onClick={handleFullScreen} className="btn btn-sm text-lg btn-ghost font-bold text-white"><BsFullscreen /></button>
                                     </div>
                                 </div>
                             </div>
