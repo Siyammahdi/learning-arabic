@@ -34,7 +34,7 @@ const Banner = () => {
                             <div className="card card-compact lg:w-[650px] bg-basic bg-opacity-50 backdrop-blur-md shadow-xl">
                                 <figure>
                                     <ReactPlayer 
-                                    url='https://www.youtube.com/watch?v=bpU2Esv8xRo&          list=PLDJj4dgyFfNRCm96fB5YaXKxqixsQ7Uj-&index=1' 
+                                    url='https://www.youtube.com/watch?v=bpU2Esv8xRo&list=PLDJj4dgyFfNRCm96fB5YaXKxqixsQ7Uj-&index=1' 
                                     config={{
                                         youtube: {
                                             playerVars: { controls: 1, fs: 0, modestbranding: 0, showinfo: 0  },
