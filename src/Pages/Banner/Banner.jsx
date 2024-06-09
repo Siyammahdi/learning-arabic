@@ -4,13 +4,49 @@ import ReactPlayer from "react-player/youtube";
 // import { useNavigate } from 'react-router-dom';
 import Background from "../../assets/background.png";
 
-const Banner = () => {
+const Player = props => {
   const playerRef = useRef(null);
   const handleFullScreen = () => {
     if (playerRef.current) {
       playerRef.current.wrapper.requestFullscreen();
     }
   };
+  return <div className="card card-compact lg:w-[450px] bg-basic bg-opacity-50 backdrop-blur-md shadow-xl">
+                <figure>
+                  <ReactPlayer
+                    url={props.url}
+                    config={{
+                      youtube: {
+                        playerVars: {
+                          controls: 1,
+                          fs: 0,
+                          modestbranding: 0,
+                          showinfo: 0,
+                        },
+                      },
+                    }}
+                    width="100%"
+                    height="230px"
+                    ref={playerRef}
+                  />
+                </figure>
+                {/* tssd */}
+                <div className="card-body">
+                  <div className="flex justify-between">
+                    <h2 className="card-title text-2xl text-white">Lesson 1</h2>
+                    <button
+                      onClick={handleFullScreen}
+                      className="btn btn-sm text-lg btn-ghost font-bold text-white"
+                    >
+                      <BsFullscreen />
+                    </button>
+                  </div>
+                </div>
+              </div>
+}
+
+const Banner = () => {
+  
 
   // const navigate = useNavigate();
   // const handleLink = () => {
@@ -38,102 +74,10 @@ const Banner = () => {
               </p>
             </div>
             <div className="flex gap-12">
-              <div className="card card-compact lg:w-[450px] bg-basic bg-opacity-50 backdrop-blur-md shadow-xl">
-                <figure>
-                  <ReactPlayer
-                    url="https://youtu.be/bpU2Esv8xRo?list=PLDJj4dgyFfNRCm96fB5YaXKxqixsQ7Uj-"
-                    config={{
-                      youtube: {
-                        playerVars: {
-                          controls: 1,
-                          fs: 0,
-                          modestbranding: 0,
-                          showinfo: 0,
-                        },
-                      },
-                    }}
-                    width="100%"
-                    height="230px"
-                    ref={playerRef}
-                  />
-                </figure>
-                {/* tssd */}
-                <div className="card-body">
-                  <div className="flex justify-between">
-                    <h2 className="card-title text-2xl text-white">Lesson 1</h2>
-                    <button
-                      onClick={handleFullScreen}
-                      className="btn btn-sm text-lg btn-ghost font-bold text-white"
-                    >
-                      <BsFullscreen />
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="card card-compact lg:w-[450px] bg-basic bg-opacity-50 backdrop-blur-md shadow-xl">
-                <figure>
-                  <ReactPlayer
-                    url="https://youtu.be/dbqR8Jh73ww?list=PLd4KNFZy4bSBl7Xxuoda1x9-EIWkQkGgu"
-                    config={{
-                      youtube: {
-                        playerVars: {
-                          controls: 1,
-                          fs: 0,
-                          modestbranding: 0,
-                          showinfo: 0,
-                        },
-                      },
-                    }}
-                    width="100%"
-                    height="230px"
-                    ref={playerRef}
-                  />
-                </figure>
-                {/* tssd */}
-                <div className="card-body">
-                  <div className="flex justify-between">
-                    <h2 className="card-title text-2xl text-white">Lesson 1</h2>
-                    <button
-                      onClick={handleFullScreen}
-                      className="btn btn-sm text-lg btn-ghost font-bold text-white"
-                    >
-                      <BsFullscreen />
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="card card-compact lg:w-[450px] bg-basic bg-opacity-50 backdrop-blur-md shadow-xl">
-                <figure>
-                  <ReactPlayer
-                    url="https://youtu.be/u8e5t86TDWs?list=PLjk5Q0xJ9l7133Z3SDERN2dDslYAfa0Dn"
-                    config={{
-                      youtube: {
-                        playerVars: {
-                          controls: 1,
-                          fs: 0,
-                          modestbranding: 0,
-                          showinfo: 0,
-                        },
-                      },
-                    }}
-                    width="100%"
-                    height="230px"
-                    ref={playerRef}
-                  />
-                </figure>
-                {/* tssd */}
-                <div className="card-body">
-                  <div className="flex justify-between">
-                    <h2 className="card-title text-2xl text-white">Lesson 1</h2>
-                    <button
-                      onClick={handleFullScreen}
-                      className="btn btn-sm text-lg btn-ghost font-bold text-white"
-                    >
-                      <BsFullscreen />
-                    </button>
-                  </div>
-                </div>
-              </div>
+              <Player url="https://youtu.be/bpU2Esv8xRo?list=PLDJj4dgyFfNRCm96fB5YaXKxqixsQ7Uj-" />
+              <Player url="https://youtu.be/dbqR8Jh73ww?list=PLd4KNFZy4bSBl7Xxuoda1x9-EIWkQkGgu" />
+              <Player url="https://youtu.be/u8e5t86TDWs?list=PLjk5Q0xJ9l7133Z3SDERN2dDslYAfa0Dn" />
+              
             </div>
           </div>
         </div>
