@@ -73,11 +73,10 @@ const Banner = () => {
                 </span>
               </p>
             </div>
-            <div className="flex gap-12">
+            <div className="flex gap-3 flex-wrap">
               <Player url="https://youtu.be/bpU2Esv8xRo?list=PLDJj4dgyFfNRCm96fB5YaXKxqixsQ7Uj-" />
               <Player url="https://youtu.be/dbqR8Jh73ww?list=PLd4KNFZy4bSBl7Xxuoda1x9-EIWkQkGgu" />
               <Player url="https://youtu.be/u8e5t86TDWs?list=PLjk5Q0xJ9l7133Z3SDERN2dDslYAfa0Dn" />
-              
             </div>
           </div>
         </div>
